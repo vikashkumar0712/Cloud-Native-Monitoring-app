@@ -28,7 +28,7 @@ spec:
         app: my-flask-app
     spec:
       containers:
-      - image: 098443230348.dkr.ecr.us-east-1.amazonaws.com/cloud-native-monitoring-app:latest
+      - image: 098443230348.dkr.ecr.us-east-1.amazonaws.com/cloud-native-monitoring-app:2b138220ac15075dde7f24cd2bf25d62d783c720
         imagePullPolicy: Always
         name: my-flask-container
         ports:
