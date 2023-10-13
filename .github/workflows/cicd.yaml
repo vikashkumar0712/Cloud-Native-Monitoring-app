@@ -67,7 +67,7 @@ jobs:
           echo ${{ github.sha }}
           sed -i 's+098443230348.dkr.ecr.us-east-1.amazonaws.com/cloud-native-monitoring-app:.*+098443230348.dkr.ecr.us-east-1.amazonaws.com/cloud-native-monitoring-app:${{ github.sha }}+g' deployment.yaml
           cat deployment.yaml
-          git add -A
+          git add .
           git commit -m "Update image for - ${{ github.sha }}"
           
       - run: echo ${{ github }}
