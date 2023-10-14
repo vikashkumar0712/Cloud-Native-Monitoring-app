@@ -1,7 +1,7 @@
 # Cluster IAM Role
 
 resource "aws_iam_role" "eks-iam-role" {
- name = var.cluster_name
+ name = var.cluster_role_name
 
  path = "/"
 
@@ -49,7 +49,7 @@ resource "aws_security_group" "eks_cluster_sg" {
 # EKS Cluster Creation
 
 resource "aws_eks_cluster" "devopsthehardway-eks" {
- name = "devopsthehardway-cluster"
+ name = var.cluster_name
  role_arn = aws_iam_role.eks-iam-role.arn
  version = "1.25"
 
