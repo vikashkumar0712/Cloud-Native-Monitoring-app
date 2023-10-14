@@ -11,6 +11,10 @@ variable "subnet_id_1" {
   type = string
   default = "cloud-native-monitoring-app"
  }
+ variable "cluster_role_name" {
+  type = string
+  default = "cloud-native-cluster-role"
+ }
  
  variable "cluster_nodegroup_name" {
   type = string
